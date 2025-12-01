@@ -54,8 +54,13 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
+  },
+  {
+    title: "Users",
+    url: "/users",
+    icon: User2,
   },
   {
     title: "Inbox",

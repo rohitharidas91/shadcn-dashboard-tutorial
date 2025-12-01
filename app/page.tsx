@@ -6,7 +6,7 @@ import { TodoList } from "@/components/TodoList";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-4 m-4">
+    <main className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-4">
       <div className="bg-primary-foreground rounded-lg p-4 lg:col-span-2 xl:col-span-1 2xl:col-span-2">
         <AppBarChart />
       </div>

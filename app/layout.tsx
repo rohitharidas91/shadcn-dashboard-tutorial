@@ -40,7 +40,7 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <AppSidebar />
-            <main className="w-full">
+            <main className="w-full p-4">
               <Navbar />
               {children}
             </main>
