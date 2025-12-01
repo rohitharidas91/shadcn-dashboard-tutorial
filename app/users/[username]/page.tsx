@@ -15,10 +15,9 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { BadgeCheck, Shield, Candy, Citrus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import EditUser from "@/components/EditUser";
 
-const UserPage = ({ params }: { params: { username: string } }) => {
-  const { username } = params;
-
+const UserPage = () => {
   return (
     <div>
       <Breadcrumb>
@@ -32,7 +31,7 @@ const UserPage = ({ params }: { params: { username: string } }) => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>{username}</BreadcrumbPage>
+            <BreadcrumbPage>John Doe</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -108,7 +107,10 @@ const UserPage = ({ params }: { params: { username: string } }) => {
           </div>
           {/*User Information Container*/}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">Information</h1>
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-semibold">User Information</h1>
+              <EditUser />
+            </div>
             <div className="space-y-4 mt-4">
               <div className="flex flex-col gap-2 mb-8">
                 <p className="text-sm text-muted-foreground">
