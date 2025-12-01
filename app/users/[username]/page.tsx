@@ -16,10 +16,12 @@ import { Progress } from "@/components/ui/progress";
 import { BadgeCheck, Shield, Candy, Citrus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AppRadialChart } from "@/components/AppRadialChart";
 
 const UserPage = () => {
   return (
-    <div>
+    <div className="p-4">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -150,9 +152,27 @@ const UserPage = () => {
         {/*Right*/}
         <div className="w-full xl:w-2/3 space-y-6">
           {/*User Card Container*/}
-          <div className="bg-primary-foreground p-4 rounded-lg">Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center gap-4">
+              <Avatar className="rounded-full h-20 w-20">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback className="text-4xl">JD</AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col">
+                <h1 className="font-bold">John Doe</h1>
+                <p className="text-sm text-muted-foreground">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet ducimus omnis quo accusamus atque quos tenetur.
+                  Repellat laboriosam ducimus illum, provident atque, deleniti,
+                  rem consequatur consequuntur impedit ullam autem perferendis!
+                </p>
+              </div>
+            </div>
+          </div>
           {/*Chart Container*/}
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <AppRadialChart />
+          </div>
         </div>
       </div>
     </div>
